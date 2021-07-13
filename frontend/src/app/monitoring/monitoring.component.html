@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1>Test Run Progress</h1>
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <button type=button class="btn btn-primary" (click)="showAllProgresses()">Show Test Progresses</button>
+<!--    <button type=button class="btn btn-primary" (click)="showSummarizedProgress()">Show Summarized Progress</button>-->
+  </div>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Progress</th>
+      <th>Passed</th>
+      <th>Failed</th>
+      <th>Done</th>
+      <th>Remained</th>
+      <th>Assigned</th>
+      <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let instanceProgress of testProgressList">
+      <td class="bold-string"><span>{{instanceProgress.instanceIP}}</span></td>
+      <td><span>{{instanceProgress.progress}}</span></td>
+      <td><span>{{instanceProgress.passed}}</span></td>
+      <td><span>{{instanceProgress.failed}}</span></td>
+      <td><span>{{instanceProgress.done}}</span></td>
+      <td><span>{{instanceProgress.remained}}</span></td>
+      <td><span>{{instanceProgress.assigned}}</span></td>
+      <!-- Set the date format to 'medium' and UTC-->
+      <td><span>{{instanceProgress.date | date : 'medium' : 'UTC'}}</span></td>
+    </tr>
+    <tr class="bold-string">
+      <td><span>Summary</span></td>
+      <td><span>{{summarizedProgress.progress}}</span></td>
+      <td><span>{{summarizedProgress.passed}}</span></td>
+      <td><span>{{summarizedProgress.failed}}</span></td>
+      <td><span>{{summarizedProgress.done}}</span></td>
+      <td><span>{{summarizedProgress.remained}}</span></td>
+      <td><span>{{summarizedProgress.assigned}}</span></td>
+      <!-- Set the date format to 'medium' and UTC-->
+      <td><span>{{summarizedProgress.date | date : 'medium' : 'UTC'}}</span></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="row">
+    <div class="summary-chart">
+      <app-piechart [pieChartData]="[ summarizedProgress.passed,
+                                      summarizedProgress.failed,
+                                      summarizedProgress.remained ]"
+                    [pieChartTitle]="summarizedProgress.instanceIP"
+                    [pieChartLegend]="true"
+                    [pieChartProgress]="summarizedProgress.progress"
+      >
+      </app-piechart>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let instanceProgress of testProgressList" class="progress-chart">
+      <app-piechart [pieChartData]="[ instanceProgress.passed,
+                                      instanceProgress.failed,
+                                      instanceProgress.remained ]"
+                    [pieChartTitle]="instanceProgress.instanceIP"
+                    [pieChartLegend]="false"
+                    [pieChartProgress]="instanceProgress.progress"
+      >
+      </app-piechart>
+    </div>
+  </div>
+</div>

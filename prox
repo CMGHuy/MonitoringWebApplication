@@ -1,0 +1,5 @@
+ENV http_proxy http://10.64.125.43:31280/
+ENV https_proxy http://10.64.125.43:31280/
+
+ENV http_proxy ""
+ENV https_proxy ""

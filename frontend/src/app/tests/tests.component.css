@@ -1,0 +1,48 @@
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  }
+  
+h1{
+    padding-top: 150px;
+}
+.container{
+    width: max-content;
+}
+
+td{
+    padding:0 15px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.1em;
+    font-family: helvetica;
+    font-weight: light;
+    min-width: 1000px;
+    box-shadow: 0 0 20px rgba(36, 57, 172, 0.15);
+    padding-top: 100px;
+    width:100%;
+    background: #C9D6FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, white, #d6d6d6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, white, #f0f0f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table tbody tr {
+    border-bottom: 5px solid #645cdd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}

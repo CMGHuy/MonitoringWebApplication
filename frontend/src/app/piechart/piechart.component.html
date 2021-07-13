@@ -1,0 +1,22 @@
+<h5 *ngIf = "pieChartTitle === 'currentProgress'; then thenBlock; else elseBlock"></h5>
+<ng-template #thenBlock>
+  <h5>Overall Progress: {{ pieChartProgress }} %</h5>
+</ng-template>
+<ng-template #elseBlock>
+  <h5>Machine: {{ pieChartTitle }} <br>
+      Test Progress: {{ pieChartProgress }} %
+  </h5>
+</ng-template>
+
+<div class="chart-wrapper">
+  <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend"
+          [colors]="pieChartColors"
+  >
+  </canvas>
+</div>

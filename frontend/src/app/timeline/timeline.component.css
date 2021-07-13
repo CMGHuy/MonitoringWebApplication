@@ -1,0 +1,84 @@
+.page-content {
+  margin-top: 4rem;
+}
+
+.bodyMain {
+  background: #C9D6FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, white, #d6d6d6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, white, #fcfbfb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.center {
+  text-shadow: darkslateblue;
+  margin: auto;
+  width: 80%;
+  border: 3px solid rgb(255, 255, 255);
+  padding: 10px;
+  box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+}
+
+.btn-edit {
+  background: url('../../assets/images/edit.svg');
+  background-size: 20px;
+}
+
+.btn-download {
+  background: url('../../assets/images/download.svg');
+  background-size: 18px;
+}
+
+.btn-table {
+  background: url('../../assets/images/table.svg');
+  background-size: 18px;
+}
+
+.btn-trash {
+  background: url('../../assets/images/trash.svg');
+  background-size: 15px;
+}
+
+.button-danger{
+  background-color: #ff1a00;
+}
+
+.button-primary{
+  background-color: #336e92;
+}
+
+.button-primary:hover{
+  transition-duration: 0.4s;
+  background-color: #0b98ee;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+.button-danger:hover{
+  transition-duration: 0.4s;
+  background-color: #f47017;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+.select-button{
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: grey;
+  border-radius: 12px;
+}
+
+.fa-clock-local{
+  background: url('../../assets/images/clock.svg');
+  background-size: 18px;
+}
+
+
